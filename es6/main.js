@@ -1,0 +1,49 @@
+import AppBar from 'material-react-components/src/AppBar';
+import Menu from 'material-design-icons/navigation/svg/production/ic_menu_24px.svg';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Tabs, { Tab } from 'material-react-components/src/Tabs';
+import Search from 'material-design-icons/action/svg/production/ic_search_24px.svg';
+import SvgIcon from 'material-react-components/src/SvgIcon';
+
+const node = document.createElement('div');
+document.body.appendChild(node);
+
+class ExampleUsage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+    this.state = {
+      tab: 0,
+    };
+  }
+
+  onChange(e, index) {
+    this.setState({
+      tab: index,
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <AppBar
+          backgroundColor="#2196f3"
+          elevation={2}
+          style={{ fill: '#FFF' }}
+          primary={<SvgIcon component={Menu} />}
+          secondary={<SvgIcon component={Search} />}
+        >
+          <span style={{ color: '#FFF' }}>AppBar</span>
+        </AppBar>
+        <Tabs index={this.state.tab} onChange={this.onChange}>
+          <Tab label="foo" />
+          <Tab label="bar" />
+          <Tab label="baz" />
+        </Tabs>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<ExampleUsage />, node);
