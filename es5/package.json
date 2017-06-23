@@ -4,7 +4,7 @@
   "description": "An example demonstrating consumption of the compiled ES5 material react components.",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server -p",
+    "start": "webpack-dev-server --no-inline -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Peter Mikitsh <peter.mikitsh@gmail.com>",
@@ -19,10 +19,12 @@
     "eslint-plugin-import": "2.3.0",
     "eslint-plugin-jsx-a11y": "5.0.3",
     "eslint-plugin-react": "7.1.0",
+    "react-svg-loader": "2.0.0-alpha.1",
     "webpack": "3.0.0",
     "webpack-dev-server": "2.5.0"
   },
   "dependencies": {
+    "material-design-icons": "3.0.1",
     "material-react-components": "material-react-components",
     "react": "15.6.1",
     "react-dom": "15.6.1"

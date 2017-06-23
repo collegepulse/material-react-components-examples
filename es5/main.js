@@ -1,6 +1,10 @@
+import AppBar from 'material-react-components/dist/AppBar';
+import Menu from 'material-design-icons/navigation/svg/production/ic_menu_24px.svg';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Tabs, { Tab } from 'material-react-components/dist/Tabs';
+import Search from 'material-design-icons/action/svg/production/ic_search_24px.svg';
+import SvgIcon from 'material-react-components/dist/SvgIcon';
 
 const node = document.createElement('div');
 document.body.appendChild(node);
@@ -22,11 +26,22 @@ class ExampleUsage extends React.Component {
 
   render() {
     return (
-      <Tabs index={this.state.tab} onChange={this.onChange}>
-        <Tab label="foo" />
-        <Tab label="bar" />
-        <Tab label="baz" />
-      </Tabs>
+      <div>
+        <AppBar
+          backgroundColor="#2196f3"
+          elevation={2}
+          style={{ fill: '#FFF' }}
+          primary={<SvgIcon component={Menu} />}
+          secondary={<SvgIcon component={Search} />}
+        >
+          <span style={{ color: '#FFF' }}>AppBar</span>
+        </AppBar>
+        <Tabs index={this.state.tab} onChange={this.onChange}>
+          <Tab label="foo" />
+          <Tab label="bar" />
+          <Tab label="baz" />
+        </Tabs>
+      </div>
     );
   }
 }
