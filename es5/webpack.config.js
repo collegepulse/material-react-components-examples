@@ -1,7 +1,6 @@
 module.exports = {
   entry: {
     bundle: [
-      './node_modules/material-react-components/dist/common.js',
       './main.js'
     ]
   },

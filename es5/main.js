@@ -1,7 +1,9 @@
-import AppBar from 'material-react-components/dist/AppBar';
+// named import from es5 index.js file
+import { AppBar } from 'material-react-components/dist';
 import Menu from 'material-design-icons/navigation/svg/production/ic_menu_24px.svg';
 import React from 'react';
 import ReactDOM from 'react-dom';
+// default and named import from ES5 source file
 import Tabs, { Tab } from 'material-react-components/dist/Tabs';
 import Search from 'material-design-icons/action/svg/production/ic_search_24px.svg';
 import SvgIcon from 'material-react-components/dist/SvgIcon';
@@ -34,7 +36,7 @@ class ExampleUsage extends React.Component {
           primary={<SvgIcon component={Menu} />}
           secondary={<SvgIcon component={Search} />}
         >
-          <span style={{ color: '#FFF' }}>AppBar</span>
+          <span style={{ color: '#FFF' }}>ES5 Example</span>
         </AppBar>
         <Tabs index={this.state.tab} onChange={this.onChange}>
           <Tab label="foo" />
