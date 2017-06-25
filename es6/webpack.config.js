@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require('webpack');
 
 module.exports = {
@@ -14,11 +15,10 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules\/(?!material-react-components)/,
-        use: [
-          'style-loader',
-          'css-loader?modules&localIdentName=[name].[local]',
-          'postcss-loader'
-        ]
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader?modules"
+        })
       },
       {
         test: /\.js$/,
@@ -34,5 +34,8 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin("styles.css")
+  ]
 };

@@ -1,10 +1,12 @@
-import AppBar from 'material-react-components/src/AppBar';
+// named import from es6 index.js file
+import { AppBar } from 'material-react-components/es';
 import Menu from 'material-design-icons/navigation/svg/production/ic_menu_24px.svg';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tabs, { Tab } from 'material-react-components/src/Tabs';
+// default and named import from ES6 source file
+import Tabs, { Tab } from 'material-react-components/es/Tabs';
 import Search from 'material-design-icons/action/svg/production/ic_search_24px.svg';
-import SvgIcon from 'material-react-components/src/SvgIcon';
+import SvgIcon from 'material-react-components/es/SvgIcon';
 
 const node = document.createElement('div');
 document.body.appendChild(node);
@@ -34,7 +36,7 @@ class ExampleUsage extends React.Component {
           primary={<SvgIcon component={Menu} />}
           secondary={<SvgIcon component={Search} />}
         >
-          <span style={{ color: '#FFF' }}>AppBar</span>
+          <span style={{ color: '#FFF' }}>ES6 Example</span>
         </AppBar>
         <Tabs index={this.state.tab} onChange={this.onChange}>
           <Tab label="foo" />

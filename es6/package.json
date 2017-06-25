@@ -4,7 +4,7 @@
   "description": "An example demonstrating consumption of the ES6 material react components.",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --no-inline -p",
+    "start": "webpack-dev-server --no-inline -p --port 8081",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,8 +28,7 @@
     "eslint-plugin-import": "2.5.0",
     "eslint-plugin-jsx-a11y": "5.0.3",
     "eslint-plugin-react": "7.1.0",
-    "postcss-loader": "2.0.6",
-    "postcss-simple-vars": "4.0.0",
+    "extract-text-webpack-plugin": "2.1.2",
     "react-svg-loader": "2.0.0-alpha.1",
     "style-loader": "0.18.2",
     "url-loader": "0.5.9",
