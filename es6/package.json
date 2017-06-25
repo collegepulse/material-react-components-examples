@@ -20,7 +20,6 @@
   "devDependencies": {
     "babel-core": "6.25.0",
     "babel-loader": "7.1.0",
-    "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
@@ -39,7 +38,7 @@
   },
   "dependencies": {
     "material-design-icons": "3.0.1",
-    "material-react-components": "material-react-components",
+    "material-react-components": "next",
     "react": "15.6.1",
     "react-dom": "15.6.1"
   }

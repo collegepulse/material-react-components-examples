@@ -5,14 +5,6 @@ This project demonstrates usage of the ES5 and ES6 versions of the material-reac
 
 - es6 (Recommended)
 
-The es6 configuration requires the following presets in .babelrc:
-
-```
-{
-  "plugins": ["transform-object-rest-spread"]
-}
-```
-
 And add the following loaders:
 
 ```
